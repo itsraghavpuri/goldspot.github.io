@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goldspot Goa</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Inter', sans-serif;
+    background: linear-gradient(180deg,#000000,#111111);
+    color:white;
+
+    /* allow scrolling if needed */
+    min-height:100vh;
+
+    /* hide scrollbar (modern browsers) */
+    scrollbar-width:none;
+}
+
+body::-webkit-scrollbar{
+    display:none;
+}
+
+
+.container{
+    width:100%;
+    max-width:420px;
+    text-align:center;
+    padding-bottom:30px;  /* prevents bottom cropping */
+}
+
+
+.wrapper{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;   /* 👈 key change */
+    padding:28px 18px;
+    box-sizing:border-box;
+}
+
+/* LOGO */
+.logo{
+    width:95px;
+    height:95px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 8px 25px rgba(0,0,0,0.6);
+}
+
+/* TITLE */
+h1{
+    margin:16px 0 4px;
+    font-size:30px;
+    font-weight:700;
+}
+
+.tagline{
+    font-size:14px;
+    opacity:0.8;
+    margin-bottom:30px;
+}
+
+/* BUTTONS */
+/* CARD BUTTON STYLE */
+/* BASE CARD (shared by all buttons) */
+.card{
+    display:block;
+    background:#1c1c1c;
+    border-radius:22px;
+    overflow:hidden;
+    text-decoration:none;
+    margin:10px 0;
+    box-shadow:0 10px 25px rgba(0,0,0,0.6);
+    transition:all .25s ease;
+    border:1px solid #2c2c2c;
+    color:white;
+    font-weight:600;
+}
+
+.card:hover{
+    transform:translateY(-5px) scale(1.02);
+    box-shadow:0 18px 35px rgba(0,0,0,0.9);
+}
+
+/* IMAGE CARD */
+.card-image img{
+    width:100%;
+    height:14vh;      /* responsive height based on screen */
+    min-height:95px;  /* don’t become too tiny */
+    max-height:130px; /* don’t become too tall */
+    object-fit:cover;
+    display:block;
+}
+
+.card-title{
+    padding:18px;
+    font-size:18px;
+}
+
+/* TEXT-ONLY CARD */
+.card-textonly{
+    padding:20px;
+    font-size:18px;
+}
+
+.card:hover .card-title,
+.card:hover .card-textonly{
+    background:#e8e0cc;
+    color:black;
+}
+
+ 
+/* background:#e8e0cc Instagram button */
+.insta{
+    display:inline-block;
+    margin-top:5px;
+    transition:.2s;
+}
+
+.insta svg{
+    width:34px;
+    height:34px;
+    fill:white;
+}
+
+.insta:hover svg{
+    fill:#b3501e;
+    transform:scale(1.15);
+}
+
+footer{
+    margin-top:2px;
+    font-size:12px;
+    opacity:.5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="container">
+
+    <!-- YOUR LOGO -->
+    <img src="logo.jpg" class="logo">
+
+    <h1>Goldspot</h1>
+    <div class="tagline">Serving Goan food on all days from 9:30 AM - 7:30 PM</div>
+
+    <a class="card card-image" href="MENU_CANTEEN_LINK" target="_blank">
+        <img src="canteen.jpg">
+        <div class="card-title">Goldspot Canteen Menu</div>
+    </a>
+    
+    <a class="card card-image" href="MENU_CAFE_LINK" target="_blank">
+        <img src="cafe.jpeg">
+        <div class="card-title">Cafe Goldspot Menu</div>
+    </a> 
+
+    <a class="card" href="https://maps.app.goo.gl/dDuWNkfkyjYH333r5" target="_blank">
+        <div class="card-textonly">📍 Find Our Locations</div>
+    </a>
+    
+    <a class="card" href="RESERVATION_LINK" target="_blank">
+        <div class="card-textonly">🍽️ Table Reservations</div>
+    </a>    
+
+    <!-- REAL INSTAGRAM ICON -->
+    <a class="insta" href="https://www.instagram.com/goldspotgoa/?hl=en" target="_blank">
+        <svg viewBox="0 0 24 24">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 
+            2.2 5 5 5h10c2.8 0 5-2.2 
+            5-5V7c0-2.8-2.2-5-5-5H7zm10 
+            2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 
+            3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 
+            1.3-3 3-3h10zm-5 3.1A4.9 4.9 0 
+            0 0 7.1 12 4.9 4.9 0 0 0 12 
+            16.9 4.9 4.9 0 0 0 16.9 12 
+            4.9 4.9 0 0 0 12 7.1zm0 
+            2A2.9 2.9 0 0 1 14.9 12 2.9 
+            2.9 0 0 1 12 14.9 2.9 2.9 0 
+            0 1 9.1 12 2.9 2.9 0 0 1 12 
+            9.1zm4.8-3.3a1.2 1.2 0 1 
+            0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/>
+        </svg>
+    </a>
+
+    <footer>See you in Goa</footer>
+
+</div>
+</div>
+</body>
+</html>
